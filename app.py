@@ -3,6 +3,16 @@ import pickle
 import pandas as pd
 import requests
 
+# similiarity File Processing
+import os
+import gdown
+
+# Download similarity.pkl if not present
+if not os.path.exists("similarity.pkl"):
+    url = "https://drive.google.com/uc?id=1W0SCyC3aKr81c1b2rViNYt4TSATosJi6"
+    gdown.download(url, "similarity.pkl", quiet=False)
+
+
 # Function to fetch movie poster
 import requests
 
